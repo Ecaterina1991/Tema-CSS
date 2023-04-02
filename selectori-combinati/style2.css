@@ -1,0 +1,38 @@
+/* SELECTORI COMBINATI */
+
+#div-primar > p {
+  color: orange;
+}
+
+/* In exemplul de mai sus se selecteaa doar descendentii directi ai divului cu id: div-primar */
+
+#div-primar + p {
+  color: greenyellow;
+}
+
+/* In exemplul de mai sus se selecteaza primul element urmator care este de tip si care se afla imediat dupa divul selectat (sibling/frate). Este frate pentru ca este descendent direct de acelasi nivel body cu divul mentionat.*/
+
+/* GENERAL SIBLING 
+selecteaza toate elementele de tip frate*/
+
+#div-primar ~ p {
+  color: red;
+}
+
+/* Proprietatea declarata in "#div-primar ~ p" suprascrie o suprascrie pe cea declarata in "#div-primar + p" pentru ca CSS ofera prioritate maxima ultimului element al cascadei.*/
+
+/* SELECTORI BAZATI PE MAI MULTE CRITERII 
+cand spre exemplu nu vrem sa selectam orice div, ci doar divul care contine clasa content.
+editam mai intai selectorul te tip dorit si adaugam selectorul de clasa fara niciun spatiu intre ele*/
+
+p.continut {
+  color: rgb(138, 47, 100);
+}
+
+/* ca sa se aplice aceasta declaratie, trebuie sa comentez declaratiile care contin id */
+
+div.continut {
+  color: yellow;
+}
+
+/* Se coloreaza cu galben paragrafele continute in divul cu clasa continut, stilurile fiind mostenite */
