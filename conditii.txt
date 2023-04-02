@@ -1,0 +1,16 @@
+Selectori CSS
+Experimentează cu selectori diferiți precum: selectori de tip, selectori de clasă, selectori de ID, selectori de atribut și combinații ale acestora.
+Culori și fundal
+Stilizează diferite elemente ale paginii, cum ar fi culoarea textului, culoarea fundalului și fundalul cu imagine.
+Margini, borduri și umpluturi
+Aplică margini, borduri și umpluturi diferite elementelor pentru a vedea cum aceste proprietăți afectează aspectul paginii.
+Dimensiuni și poziționare
+Experimentează cu proprietățile width, height, position, top, right, bottom și left pentru a modifica dimensiunile și poziționarea elementelor.
+Flexbox și Grid
+Creează un layout flexibil folosind display: flex și proprietățile asociate, precum flex-direction, justify-content și align-items. De asemenea, exersează crearea unui layout grid folosind display: grid și proprietățile asociate, precum grid-template-columns, grid-template-rows și grid-gap.Pseudo-clase și pseudo-elemente
+Experimentează cu pseudo-clase și pseudo-elemente pentru a aplica stiluri specifice unor elemente, cum ar fi :hover, :active, :first-child, :last-child, ::before și ::after.Animații și tranziții
+Creează animații și tranziții CSS folosind proprietățile transition, transform, animation și keyframes.Stilizarea formularelor
+Stilizează elemente de formular, cum ar fi butoane, câmpuri de text, casete de selectare și casete de bifare, folosind proprietăți specifice pentru aceste elemente.Responsivitate și media queries
+Fă-ți site-ul responsiv folosind media queries pentru a aplica stiluri diferite în funcție de lățimea ecranului sau a altor proprietăți ale dispozitivului.Stilizarea listelor și tabelelor
+Personalizează aspectul listelor și tabelelor prin modificarea stilurilor listelor cu marcatori și numerotate, precum și prin aplicarea de stiluri pentru celulele tabelelor.
+După ce ai parcurs aceste exerciții, vei avea o înțelegere solidă a aspectelor de bază ale CSS și a modului în care pot fi folosite pentru a stiliza o pagină web. Nu uita să le aplici pe o structură HTML pentru a vedea efectele în practică.
