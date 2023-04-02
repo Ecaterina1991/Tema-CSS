@@ -13,15 +13,26 @@ Experimentează cu proprietățile width, height, position, top, right, bottom �
 
 p {
   color: rgb(73, 17, 17);
-  padding: 10px;
+  padding: 1em;
 }
 
 body {
   background-color: rgb(194, 166, 166);
-  max-width: 960px;
-  padding: 30px;
-  margin: 20px;
+  max-width: 96em;
+  /* max-width: 960px; */
+  font-size: 62.5%;
+  padding: 3em;
+  margin: 2em;
 }
+
+.paragraf1,
+.paragraf2,
+.paragraf3,
+.paragraf4 {
+  font-size: 2em;
+}
+
+/* am setat font-size la 62.5% pentru a putea transforma mai usor px in em impartind totul la 10, nu la 16. in scurt timp voi incerca sa fac totul responsive cu flexbox, grid si media query, deci trebuie sa imi fac setarile de asa natura incat sa pot lucra usor si sa nu pierd timp */
 
 section {
   position: relative;
@@ -29,22 +40,34 @@ section {
 
 .paragraf4 {
   position: absolute;
-  width: 300px;
+  width: 30em;
   height: auto;
-  top: 600px;
-  left: 300px;
+  /* top: 600px; */
+  top: 100em;
+  left: 30em;
 }
 
 /* I-am atribuit paragrafului 4 pozitie absoluta in raport cu sectionea in care se afla si careia i-am conferit o pozitie relativa, ca sa pot deplasa ultimul paragraf intr-o maniera precisa. I-am definit proprietatea top si left astfel incat sa nu suprascrie text pe text celelalte paragrafe si sa fie clar vizibil faptul ca este pozitionat absolut. Aceasta aranjare nu are nicio legatura cu bazele WEB-DESIGN si au drept scop experimentarea, asa cum cere conditia exercitiului.  */
 
 .paragraf2 {
   position: absolute;
-  width: 300px;
+  width: 25em;
   height: auto;
-  top: 600px;
-  left: 900px;
+  /* top: 600px; */
+  top: 120em;
+  left: 5em;
 }
 
 /* am experimentat putin si cu al doilea paragraf. se observa ca a iesit cu totul din flow-ul paginii, nelasand spatiu liber in locul une s-a aflat initial. Celelalte elemente se aliniaza astfel in pagina incat sa umple spatiul gol ramas de pe urma celui de-al doilea paragraf. */
 
 /* Observ ca in momentul in care am inserat o imagine, componentele paginii pozitionate absolut si-au schimbat pozitia aparenta in pagina, unul din doua paragrafe intrand intr-o suprapunere deranjanta cu primele doua paragrafe care apartin flow-ului normal al paginii. Motivul este ca imaginea a ocupat un nou spatiu deasupra paragrafelor si  inaltimea pe care am estimat-o eu initial ca ar fi potrivita pentru top nu mai este indeajuns.   */
+
+.paragraf1 {
+  width: 50%;
+}
+
+.paragraf3 {
+  width: 50%;
+}
+
+/* am aplicat width 50% celor 2 elemente din flowul principal al paginii pentru a vedea efectul in pagina */
