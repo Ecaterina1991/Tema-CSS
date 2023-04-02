@@ -19,10 +19,16 @@ p {
 body {
   background-color: rgb(194, 166, 166);
   max-width: 96em;
-  /* max-width: 960px; */
+
   font-size: 62.5%;
   padding: 3em;
   margin: 2em;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  padding: 30px;
 }
 
 .paragraf1,
@@ -32,6 +38,9 @@ body {
   font-size: 2em;
 }
 
+.paragraf1 {
+  margin-top: 30px;
+}
 /* am setat font-size la 62.5% pentru a putea transforma mai usor px in em impartind totul la 10, nu la 16. in scurt timp voi incerca sa fac totul responsive cu flexbox, grid si media query, deci trebuie sa imi fac setarile de asa natura incat sa pot lucra usor si sa nu pierd timp */
 
 section {
@@ -40,11 +49,11 @@ section {
 
 .paragraf4 {
   position: absolute;
+  border: 3px solid red;
   width: 30em;
   height: auto;
-  /* top: 600px; */
   top: 100em;
-  left: 30em;
+  left: 40em;
 }
 
 /* I-am atribuit paragrafului 4 pozitie absoluta in raport cu sectionea in care se afla si careia i-am conferit o pozitie relativa, ca sa pot deplasa ultimul paragraf intr-o maniera precisa. I-am definit proprietatea top si left astfel incat sa nu suprascrie text pe text celelalte paragrafe si sa fie clar vizibil faptul ca este pozitionat absolut. Aceasta aranjare nu are nicio legatura cu bazele WEB-DESIGN si au drept scop experimentarea, asa cum cere conditia exercitiului.  */
@@ -53,9 +62,9 @@ section {
   position: absolute;
   width: 25em;
   height: auto;
-  /* top: 600px; */
   top: 120em;
   left: 5em;
+  border: 3px solid blue;
 }
 
 /* am experimentat putin si cu al doilea paragraf. se observa ca a iesit cu totul din flow-ul paginii, nelasand spatiu liber in locul une s-a aflat initial. Celelalte elemente se aliniaza astfel in pagina incat sa umple spatiul gol ramas de pe urma celui de-al doilea paragraf. */
@@ -63,11 +72,60 @@ section {
 /* Observ ca in momentul in care am inserat o imagine, componentele paginii pozitionate absolut si-au schimbat pozitia aparenta in pagina, unul din doua paragrafe intrand intr-o suprapunere deranjanta cu primele doua paragrafe care apartin flow-ului normal al paginii. Motivul este ca imaginea a ocupat un nou spatiu deasupra paragrafelor si  inaltimea pe care am estimat-o eu initial ca ar fi potrivita pentru top nu mai este indeajuns.   */
 
 .paragraf1 {
-  width: 50%;
+  /* width: 50%; */
+  width: 100%;
+  border: 2px;
+  border-style: solid;
+  border-color: aqua royalblue yellowgreen orangered;
+  border-radius: 3em;
 }
 
 .paragraf3 {
   width: 50%;
+  border-style: dotted;
+  border-width: 5px;
+  background-color: aquamarine;
 }
 
 /* am aplicat width 50% celor 2 elemente din flowul principal al paginii pentru a vedea efectul in pagina */
+
+/* ?STILIZARE IMAGINI/////////////////////// */
+
+.imagine-wrapper {
+  text-align: end;
+}
+
+#imagine {
+  width: 25em;
+}
+
+/* Nu este o idee buna a se insera height la imagine intrucat poate deforma imaginea. Se poate adauga height auto si width cat vrem noi. Sau putem sa nu specificam height pentru ca va avea o valoare auto implicita.
+
+Imaginile sunt inline-block. Observ ca imaginea mea este localizata in partea stanga, deci de la stanga la dreapta, asa cum sunt pozitionate elementele de tip inline-block.
+Pentru aliniere se poate folosi text-align.
+Am incercat sa aplic text-align pe imagine si nu s-a intamplat nimic pentru ca aceasta proprietate trebuie aplicata pe elementul parinte in care se afla imaginea*/
+
+/* Ca experiment, am inserat imaginea in paragraf fara div si aceasta se comporta ca un element al textului. */
+
+#imagine-in-paragraf {
+  width: 30em;
+  padding: 3em;
+  float: left;
+}
+
+/*?STILIZARE IMAGINI DE FUNDAL////// */
+
+#imagine-fundal {
+  width: 80%;
+  height: 50em;
+  background-image: url(./img/the-sea.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid black;
+}
+
+/* imaginea de fundal este pozitionata in coltul de stanga sus al elementului. ea nu poate afecta dimensiunea elementului din interiorul careia este localizata. daca este mai mare decat dimensiunea elementului in care se afla, este decupata. daca este mai mica, se repeta. */
+
+/*!Am inserat proprietatea  "background-position: center;", dar nu vad nimic centrat in pagina si nu stiu sigur din ce cauza (desi cu Inspect observ ca este aplicata). Estimez ca imaginea s-ar centra doar daca ar fi mai mica decat containerul in care se afla. Estimez ca daca ocupa intreg divul si are setarea fixa de 80%, nu are cum sa se deplaseze, pentru ca nu ii ramane spatiu pentru deplasare. Exact: daca comentez width: 80%, brusc se centreaza. */
+
+/* am ramas la minutul 10 din videoul 18.02. E timpul sa ma culc si sa ma transform intr-o dovlecica. */
