@@ -1,0 +1,50 @@
+/* Culori și fundal
+Stilizează diferite elemente ale paginii, cum ar fi culoarea textului, culoarea fundalului și fundalul cu imagine. 
+Margini, borduri și umpluturi
+Aplică margini, borduri și umpluturi diferite elementelor pentru a vedea cum aceste proprietăți afectează aspectul paginii.
+Dimensiuni și poziționare
+Experimentează cu proprietățile width, height, position, top, right, bottom și left pentru a modifica dimensiunile și poziționarea elementelor.*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  color: rgb(73, 17, 17);
+  padding: 10px;
+}
+
+body {
+  background-color: rgb(194, 166, 166);
+  max-width: 960px;
+  padding: 30px;
+  margin: 20px;
+}
+
+section {
+  position: relative;
+}
+
+.paragraf4 {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  top: 600px;
+  left: 300px;
+}
+
+/* I-am atribuit paragrafului 4 pozitie absoluta in raport cu sectionea in care se afla si careia i-am conferit o pozitie relativa, ca sa pot deplasa ultimul paragraf intr-o maniera precisa. I-am definit proprietatea top si left astfel incat sa nu suprascrie text pe text celelalte paragrafe si sa fie clar vizibil faptul ca este pozitionat absolut. Aceasta aranjare nu are nicio legatura cu bazele WEB-DESIGN si au drept scop experimentarea, asa cum cere conditia exercitiului.  */
+
+.paragraf2 {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  top: 600px;
+  left: 900px;
+}
+
+/* am experimentat putin si cu al doilea paragraf. se observa ca a iesit cu totul din flow-ul paginii, nelasand spatiu liber in locul une s-a aflat initial. Celelalte elemente se aliniaza astfel in pagina incat sa umple spatiul gol ramas de pe urma celui de-al doilea paragraf. */
+
+/* Observ ca in momentul in care am inserat o imagine, componentele paginii pozitionate absolut si-au schimbat pozitia aparenta in pagina, unul din doua paragrafe intrand intr-o suprapunere deranjanta cu primele doua paragrafe care apartin flow-ului normal al paginii. Motivul este ca imaginea a ocupat un nou spatiu deasupra paragrafelor si  inaltimea pe care am estimat-o eu initial ca ar fi potrivita pentru top nu mai este indeajuns.   */
