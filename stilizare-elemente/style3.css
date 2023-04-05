@@ -120,12 +120,30 @@ Am incercat sa aplic text-align pe imagine si nu s-a intamplat nimic pentru ca a
   height: 50em;
   background-image: url(./img/the-sea.jpg);
   background-repeat: no-repeat;
-  background-position: center;
-  border: 1px solid black;
+  /* background-position: center; */
+  /* border: 1px solid black; */
+  /* background-size: cover; */
+  /* background-attachment: local;
+  overflow: auto; */
+  border: 32px solid rgba(0, 0, 0, 0.144);
+  padding: 32px;
+  background-origin: padding-box;
+}
+
+#imagine-fundal p {
+  font-size: 2em;
 }
 
 /* imaginea de fundal este pozitionata in coltul de stanga sus al elementului. ea nu poate afecta dimensiunea elementului din interiorul careia este localizata. daca este mai mare decat dimensiunea elementului in care se afla, este decupata. daca este mai mica, se repeta. */
 
-/*!Am inserat proprietatea  "background-position: center;", dar nu vad nimic centrat in pagina si nu stiu sigur din ce cauza (desi cu Inspect observ ca este aplicata). Estimez ca imaginea s-ar centra doar daca ar fi mai mica decat containerul in care se afla. Estimez ca daca ocupa intreg divul si are setarea fixa de 80%, nu are cum sa se deplaseze, pentru ca nu ii ramane spatiu pentru deplasare. Exact: daca comentez width: 80%, brusc se centreaza. */
+/*Am inserat proprietatea  "background-position: center;", dar nu vad nimic centrat in pagina si nu stiu sigur din ce cauza (desi cu Inspect observ ca este aplicata). Estimez ca imaginea s-ar centra doar daca ar fi mai mica decat containerul in care se afla. Estimez ca daca ocupa intreg divul si are setarea fixa de 80%, nu are cum sa se deplaseze, pentru ca nu ii ramane spatiu pentru deplasare. Exact: daca comentez width: 80%, brusc se centreaza. */
 
-/* am ramas la minutul 10 din videoul 18.02. E timpul sa ma culc si sa ma transform intr-o dovlecica. */
+/* cu "background-attachment: local" putem adauga un anume text deasupra imaginii, inserand textul dorit in divul gol asupra caruia am definit cu ajutorul stilizarii imaginea de background. Adaugand aici   "overflow: auto;" imaginea este fixata impreuna cu continutul si se deruleaza impreuna cu acesta.*/
+
+/* Experimentare cu border lat si padding pe background image.
+Inserez un border lat si un padding lat. Selectez background-origin.
+ background-origin: 
+ padding-box; - imaginea se aliniaza cu marginea superioara si din stanga
+ content-box - se aliniaza top-left dupa padding
+ border-box - imaginea este pozitionata in raport cu marginile exterioare ale cadrului, deci se suprapune peste border. 
+ background-clip: border-box valoare implicita - imaginea se aliniaza cu marginea exterioara a cadrului, sub border */
