@@ -147,3 +147,14 @@ Inserez un border lat si un padding lat. Selectez background-origin.
  content-box - se aliniaza top-left dupa padding
  border-box - imaginea este pozitionata in raport cu marginile exterioare ale cadrului, deci se suprapune peste border. 
  background-clip: border-box valoare implicita - imaginea se aliniaza cu marginea exterioara a cadrului, sub border */
+
+/* Experimentez cu introducerea unei imagini in partea superioara a paginii. Vreau sa fie fixa, sa aiba un text fix in stanga. cand dai scroll sa faca parte din background si sa ramana fix si textul si imaginea.
+Prima eroare: daca fac un div gol si pe clasa lui adaug background image fara nimic altceva nu imi apare nimic. Apare abia daca setez cumva background-origin apare.
+2. daca sterg height-ul, deci nu ii dau nicio proprietate, imaginea se pliaza mult pe orizontala. cred ca inaltimea auto nu este implicita pentru background-image.
+3. observ ca imaginea mea e decupata si vreau sa gasesc o metoda de a o insera precis si intreaga in pagina.
+Am reusit sa scap de decuparea imaginii cu background-size: cover;
+
+Am obtinut ce am vrut pentru text cu  background-attachment: local;
+        overflow: auto; l-am pozitionat absolut. l-am facut responsive, dar nu sunt multumita de aspectul textului in raport cu imaginea cand o micsorez, deci voi incerca un cod flexbox.
+        Experiment reusit. Va fi mai bine cu media query.
+*/
