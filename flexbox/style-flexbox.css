@@ -1,3 +1,28 @@
 body {
   background-color: aqua;
 }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 30px;
+}
+
+.imagine {
+  flex: 1;
+  margin-right: 30px;
+}
+
+.text-container {
+  flex: 1;
+  margin-left: 30px;
+  font-size: 32px;
+}
+
+/* experiment cu succes. am reprezentat cea mai simpla aranjare stanga dreapta in pagina cu flexbox. 
+Clasa .container este folosită pentru a grupa imaginea și textul și a se aplica stilurile flexbox.
+Proprietatea display: flex face ca elementul .container să devină un container flexbox.
+Proprietatea flex-direction: row specifică că elementele sunt aranjate pe aceeași linie orizontală.
+Proprietatea align-items: center este folosită pentru a centra imaginea și textul pe axa verticală.
+Stilul flex: 1 aplicat la imagine și text face ca acestea să fie flexibile și să împartă spațiul disponibil în container.*/
