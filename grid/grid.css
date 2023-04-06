@@ -1,0 +1,115 @@
+body {
+  background-color: rgb(221, 221, 243);
+  font-size: 1.2em;
+  line-height: 1.6;
+  display: grid;
+  grid-template-rows: 10em 50vh auto 10em;
+  grid-template-columns: 1fr 5fr 2fr 1fr;
+  grid-template-areas:
+    "header header header header"
+    "hero hero hero hero"
+    ". main aside ."
+    "footer footer footer footer";
+}
+
+header {
+  grid-area: header;
+}
+
+header,
+footer {
+  background-color: black;
+  color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title,
+.footer-title {
+  font-size: 38px;
+  text-transform: uppercase;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.hero {
+  grid-area: hero;
+  background: url("../stilizare-elemente/img/galben.jpg") no-repeat center
+    center fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  text-transform: uppercase;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 5em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.hero-subtitle {
+  text-transform: uppercase;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  color: white;
+  font-size: 1.88em;
+  margin: 0;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+  background: darkgrey;
+  padding: 1.5em;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* Cards */
+
+.card {
+  display: grid;
+  /* grid-template-columns: 1fr 3fr;
+  grid-template-rows: min-content auto;
+  grid-template-areas:
+    "img title"
+    "img content"; */
+
+  grid-template:
+    "img title" min-content
+    "img content" auto / 1fr 3fr;
+}
+
+.card-img {
+  grid-area: img;
+}
+
+.card-title {
+  grid-area: title;
+}
+
+.card-content {
+  grid-area: content;
+}
+
+/* Note asupra acestei pagini de stilizare
+grid-template-rows - este o proprietate CSS utilizată pentru a defini înălțimea fiecărui rând într-o grilă CSS. Valoarea acestei proprietăți poate fi o listă de valori separate prin spațiu, corespunzătoare înălțimilor fiecărui rând în ordinea în care acestea apar.
+
+În exemplul specificat, grid-template-rows definește patru rânduri, fiecare cu înălțimea specificată în funcție de valorile enumerate:
+
+Primul rând are o înălțime de 10em.
+Al doilea rând are o înălțime de 50vh (50% din înălțimea ferestrei vizibile a browserului).
+Al treilea rând are o înălțime auto, ceea ce înseamnă că înălțimea acestui rând va fi ajustată automat în funcție de conținutul acestuia.
+Al patrulea rând are o înălțime de 10em.
+Această valoare a proprietății grid-template-rows este utilă atunci când dorim să specificăm în mod explicit înălțimea fiecărui rând într-o grilă CSS, permițând astfel un control mai precis asupra aranjamentului elementelor în grilă.
+*/
+
+/* https://www.youtube.com/watch?v=v5KzBPUEgGQ&list=PL4-IK0AVhVjPv5tfS82UF_iQgFp4Bl998&index=2&ab_channel=KevinPowell */
+/* minut24.42 */
