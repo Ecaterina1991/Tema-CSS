@@ -1,27 +1,3 @@
-/* .experiment {
-        position: relative;
-        width: 100%;
-        height: 50em;
-        background-image: url(./img/foto.jpg);
-        background-repeat: no-repeat;
-        border: 32px solid rgba(0, 0, 0, 0.144);
-        padding: 32px;
-        background-origin: padding-box;
-        background-size: cover;
-        background-attachment: local;
-        overflow: auto;
-      }
-
-      .text {
-        font-family: "Source Sans Pro", sans-serif;
-        color: rgb(58, 54, 54);
-        font-size: 4.06em;
-        font-weight: 900;
-        position: absolute;
-        top: 309px;
-        left: 350px;
-      } */
-
 /* background-color: rgb(13, 13, 65);
   color: rgb(217, 243, 243); */
 
@@ -36,6 +12,12 @@ body {
   background-color: rgba(66, 245, 245, 0.774);
 }
 
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .experiment {
   display: flex;
   justify-content: center;
@@ -48,15 +30,22 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   color: rgb(58, 54, 54);
   font-size: 4em;
-  font-size: clamp(1em, 3vm, 4em);
+  font-size: clamp(2em, 2vm, 4em);
   font-weight: 900;
   top: 4em;
   left: 4em;
 }
 
+@media (max-width: 40em) {
+  .text {
+    font-size: 1.5em;
+    font-size: clamp(0.5em, 3vm, 1.5em);
+  }
+}
+
 .second-section > div {
-  font-size: 2em;
-  font-size: clamp(0.5em, 2vm, 2em);
+  font-size: 1.5em;
+  font-size: clamp(1em, 2vm, 2em);
 }
 
 .container {
@@ -67,7 +56,10 @@ body {
 
 .second-section {
   display: flex;
+  flex-direction: column;
   gap: 5%;
+  margin: 5rem auto;
+  width: min(90%, 75rem);
 }
 
 .nav {
@@ -77,6 +69,12 @@ body {
   margin: 0 auto;
   background-color: rgb(13, 13, 65);
 }
+
+/* @media (max-width: 40em) {
+  nav {
+    display: none;
+  }
+} */
 
 .nav > li > a {
   list-style: none;
@@ -122,13 +120,66 @@ li {
 }
 
 .imagine-programare {
+  object-fit: cover;
+
   min-height: 100px;
   padding: 2em 0;
 }
 
-@media (max-width: 40em) {
-  .text {
-    font-size: 1.5em;
-    font-size: clamp(0.5em, 3vm, 1.5em);
+/* STILIZARE GRID */
+
+.columns {
+  margin: 5rem auto;
+  width: min(90%, 75rem);
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1em;
+}
+
+@media (min-width: 45em) {
+  .columns {
+    grid-auto-flow: column;
+  }
+
+  .second-section {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    margin: 5rem auto;
+    width: min(90%, 75rem);
   }
 }
+
+/* Note pe aceasta pagina style 
+
+width: min(90%, 75rem);
+  /* Proprietatea width aici stabilește lățimea maximă a elementului .grid la 90% din lățimea containerului său părinte sau la 75rem, în funcție de care valoare este mai mică. */
+
+/*  grid-auto-flow: row;specifică direcția în care elementele grilei sunt plasate automat atunci când nu sunt plasate în mod explicit folosind proprietățile grid-column-start, grid-column-end, grid-row-start și grid-row-end.
+  Când grid-auto-flow este setat pe column, elementele grilei sunt plasate automat în coloane, începând din colțul din stânga sus al containerului de grilă și mutându-se de sus în jos și de la stânga la dreapta. Acest lucru înseamnă că elementele grilei vor umple fiecare coloană înainte de a trece la următoarea. */
+
+/* Codul cu care am incercat sa pozitionez text imagine in topul paginii cu position absolute/ position relative. Inca nici cu flexbox nu am atins versiunea perfecta */
+
+/* .experiment {
+        position: relative;
+        width: 100%;
+        height: 50em;
+        background-image: url(./img/foto.jpg);
+        background-repeat: no-repeat;
+        border: 32px solid rgba(0, 0, 0, 0.144);
+        padding: 32px;
+        background-origin: padding-box;
+        background-size: cover;
+        background-attachment: local;
+        overflow: auto;
+      }
+
+      .text {
+        font-family: "Source Sans Pro", sans-serif;
+        color: rgb(58, 54, 54);
+        font-size: 4.06em;
+        font-weight: 900;
+        position: absolute;
+        top: 309px;
+        left: 350px;
+      } */
