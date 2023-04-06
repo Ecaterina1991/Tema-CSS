@@ -1,3 +1,9 @@
+* {
+  margin: 0em;
+  padding: 0em;
+  box-sizing: border-box;
+}
+
 body {
   background-color: aqua;
 }
@@ -6,18 +12,19 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 30px;
+  margin: 1.85em;
+  gap: 1.87em;
 }
 
 .imagine {
   flex: 1;
-  margin-right: 30px;
+  max-width: 22em;
 }
 
 .text-container {
   flex: 1;
-  margin-left: 30px;
-  font-size: 32px;
+  font-size: 1.5em;
+  font-size: clamp(0.7em, 2vm, 1.5em);
 }
 
 /* experiment cu succes. am reprezentat cea mai simpla aranjare stanga dreapta in pagina cu flexbox. 

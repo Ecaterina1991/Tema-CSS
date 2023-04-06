@@ -1,0 +1,59 @@
+/* .experiment {
+        position: relative;
+        width: 100%;
+        height: 50em;
+        background-image: url(./img/foto.jpg);
+        background-repeat: no-repeat;
+        border: 32px solid rgba(0, 0, 0, 0.144);
+        padding: 32px;
+        background-origin: padding-box;
+        background-size: cover;
+        background-attachment: local;
+        overflow: auto;
+      }
+
+      .text {
+        font-family: "Source Sans Pro", sans-serif;
+        color: rgb(58, 54, 54);
+        font-size: 4.06em;
+        font-weight: 900;
+        position: absolute;
+        top: 309px;
+        left: 350px;
+      } */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.experiment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgb(58, 54, 54);
+  font-size: 4em;
+  font-size: clamp(1em, 3vm, 4em);
+  font-weight: 900;
+  top: 4em;
+  left: 4em;
+}
+
+.second-section > div {
+  font-size: 2em;
+  font-size: clamp(0.5em, 2vm, 2em);
+}
+
+@media (max-width: 70em) {
+  .text {
+    font-size: 1.5em;
+    font-size: clamp(0.5em, 3vm, 1.5em);
+  }
+}
