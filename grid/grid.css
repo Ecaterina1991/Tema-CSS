@@ -1,3 +1,5 @@
+/* Redactare stilizare nav */
+
 .nav-prima-pagina {
   display: flex;
   justify-content: center;
@@ -62,7 +64,7 @@ footer {
 
 .header-title,
 .footer-title {
-  font-size: 38px;
+  font-size: 2.38em;
   text-transform: uppercase;
   font-family: "Yanone Kaffeesatz", sans-serif;
 }
@@ -141,8 +143,9 @@ footer {
 .card-content {
   grid-area: content;
 }
+
 .card-content > a {
-  color: rgb(202, 202, 117);
+  color: rgb(90, 90, 51);
   font-size: 1.1em;
   text-decoration: none;
 }
