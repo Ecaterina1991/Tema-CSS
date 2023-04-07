@@ -6,7 +6,37 @@
 
 body {
   background-color: aqua;
+  margin: 0 auto;
 }
+
+/* Stilizare nav Inapoi catre prima pagina */
+
+.nav-prima-pagina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  font-size: 1.7em;
+  font-weight: 600;
+}
+.nav-prima-pagina > li {
+  list-style-type: none;
+}
+
+.nav-prima-pagina > li > a {
+  text-decoration: none;
+}
+.nav-prima-pagina > li > a:hover {
+  text-decoration: none;
+  color: rgb(25, 82, 47);
+}
+.nav-prima-pagina > li > a:active {
+  text-decoration: none;
+  color: rgb(21, 34, 26);
+}
+
+/* 
+/////////////////////////// */
 
 .container {
   display: flex;
@@ -33,3 +63,47 @@ Proprietatea display: flex face ca elementul .container să devină un container
 Proprietatea flex-direction: row specifică că elementele sunt aranjate pe aceeași linie orizontală.
 Proprietatea align-items: center este folosită pentru a centra imaginea și textul pe axa verticală.
 Stilul flex: 1 aplicat la imagine și text face ca acestea să fie flexibile și să împartă spațiul disponibil în container.*/
+
+.patrate {
+  padding: 4em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+
+.patrat-item {
+  width: 9.38em;
+  height: 9.38em;
+}
+
+.patrat-galben {
+  background-color: yellow;
+}
+.patrat-rosu {
+  background-color: red;
+}
+.patrat-verde {
+  background-color: green;
+}
+.patrat-albastru {
+  background-color: blue;
+}
+
+.paragraf-centrat {
+  padding: 0 2em;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  padding: 2em 2em;
+  background-color: rgb(73, 26, 26);
+}

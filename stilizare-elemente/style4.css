@@ -33,7 +33,7 @@ h2 {
   font-size: clamp(2em, 2vm, 4em);
   font-weight: 900;
   top: 4em;
-  left: 4em;
+  left: 1.8em;
 }
 
 @media (max-width: 40em) {
@@ -84,7 +84,7 @@ h2 {
 
 .nav > * {
   padding: 15px 0;
-  font-size: 2em;
+  font-size: 1.4em;
 }
 
 li {
