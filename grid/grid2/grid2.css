@@ -1,0 +1,136 @@
+/* .nav-prima-pagina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  font-size: 1.7em;
+  font-weight: 600;
+}
+.nav-prima-pagina > li {
+  list-style-type: none;
+}
+
+.nav-prima-pagina > li > a {
+  text-decoration: none;
+}
+.nav-prima-pagina > li > a:hover {
+  text-decoration: none;
+  color: rgb(25, 82, 47);
+}
+.nav-prima-pagina > li > a:active {
+  text-decoration: none;
+  color: rgb(21, 34, 26);
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(240, 221, 221);
+  font-size: 1.3em;
+  line-height: 2em;
+  display: grid;
+  grid-template-rows: 10em 50vh auto 10em;
+  grid-template-columns: 1fr 5fr 2fr 1fr;
+  grid-template-areas:
+    "header header header header"
+    "hero hero hero hero"
+    " . main aside . "
+    "footer footer footer footer";
+
+  grid-column-gap: 1.5em;
+}
+
+header,
+footer {
+  background-color: rgb(37, 30, 30);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1.6em;
+  color: yellow;
+}
+
+header {
+  grid-area: header;
+}
+
+.hero {
+  grid-area: hero;
+  background: url(img-grid2/galben.jpg);
+  background-repeat: no-repeat;
+  background-position: fixed;
+}
+
+.hero-title {
+  display: flex;
+  justify-content: center;
+  font-size: 3.4em;
+  font-weight: 600;
+  margin-top: 1.5em;
+}
+
+.hero-subtitle {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: 600;
+  padding: 1em;
+  color: rgb(58, 64, 68);
+}
+
+main {
+  grid-area: main;
+}
+
+main > h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+.card {
+  display: grid;
+  grid-template:
+    "imagine titlu" min-content
+    "imagine continut" auto
+    / 1fr 3fr;
+  grid-column-gap: 1.2em;
+  margin-bottom: 3em;
+}
+
+.card-img {
+  grid-area: imagine;
+}
+
+.card-title {
+  grid-area: titlu;
+}
+
+.card-content {
+  grid-area: continut;
+}
+
+aside {
+  grid-area: aside;
+  background: rgba(100, 59, 247, 0.541);
+  padding: 1.5em;
+}
+
+aside > h1 {
+  margin-bottom: 1em;
+}
+
+aside > p {
+  margin-top: 3em;
+}
+
+footer {
+  grid-area: footer;
+}
