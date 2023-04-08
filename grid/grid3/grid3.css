@@ -1,3 +1,29 @@
+.nav3-prima-pagina {
+  /* display: flex;
+  justify-content: flex-end; */
+  align-items: center;
+  padding: 1em;
+  font-size: 1em;
+  font-weight: 600;
+}
+.nav3-prima-pagina > li {
+  list-style-type: none;
+}
+
+.nav3-prima-pagina > li > a {
+  text-decoration: none;
+}
+.nav3-prima-pagina > li > a:hover {
+  text-decoration: none;
+  color: rgb(25, 82, 47);
+}
+.nav3-prima-pagina > li > a:active {
+  text-decoration: none;
+  color: rgb(21, 34, 26);
+}
+/* .nav3-prima-pagina > li > a {
+} */
+
 body {
   display: grid;
   grid-template:
@@ -14,7 +40,7 @@ header {
   grid-area: header;
   background-color: red;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -55,3 +81,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+/* Nu m-am așteptat să întâmpin dificultăți în construirea acestui grid simplist, dar nu mi-a ieșit nici din prima, nici din a doua, nici din a treia încercare.
+Prima greșeală e că am plasat într-o secțiune toate celelalte componente mai mici marcate cu sintaxa HTML5, ex header, main footer. Apoi nu a fost cea mai buna idee că cele trei secțiuni pe care am vrut sa le aliniez in pagina sa le plasez în acelasi container main. A funcționat după ce am șters secțiunea generala și după ce am creat un container main si doua aside pentru conținutul principal. Cumva stabilirea unei sintaxe HTML5 pentru containerele principale care necesita aliniere a funcționat cel mai bine. Posibil că parserul sa aibă o ușurință înaltă în citirea sintaxei html5 de tip arbore DOM.
+ */
