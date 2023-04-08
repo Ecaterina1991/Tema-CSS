@@ -1,0 +1,57 @@
+body {
+  display: grid;
+  grid-template:
+    "header header header" 5em
+    "section-a section-b section-c" 30vh
+    "footer footer footer" 5em
+    / 2fr 1fr 1fr;
+  font-size: xx-large;
+  color: white;
+  margin: 0.4em;
+}
+
+header {
+  grid-area: header;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* main {
+  grid-area: main;
+} */
+
+main {
+  grid-area: section-a;
+  background-color: blueviolet;
+  display: inline-block;
+}
+
+main > div > p,
+aside > div > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
+}
+
+.sectiune-b {
+  grid-area: section-b;
+  background-color: yellow;
+  display: inline-block;
+}
+
+.sectiune-c {
+  grid-area: section-c;
+  background-color: orange;
+  display: inline-block;
+}
+
+footer {
+  grid-area: footer;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
