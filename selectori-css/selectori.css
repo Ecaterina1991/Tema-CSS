@@ -1,0 +1,42 @@
+/* Experimentează cu pseudo-clase și pseudo-elemente pentru a aplica stiluri specifice unor elemente, cum ar fi :hover, :active, :first-child, :last-child, ::before și ::after. */
+
+/* hover */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Schibsted Grotesk", sans-serif;
+}
+
+h1,
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7em;
+}
+
+.ul-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 2em;
+  background-color: black;
+  margin-top: 2em;
+}
+
+.ul-nav > li {
+  list-style-type: none;
+}
+
+.ul-nav > li > a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.ul-nav > li > a:hover,
+.ul-nav > li > a:focus,
+.ul-nav > li > a:active {
+  color: red;
+}

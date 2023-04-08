@@ -7,8 +7,10 @@ Aplică margini, borduri și umpluturi diferite elementelor pentru a vedea cum a
 Dimensiuni și poziționare
 Experimentează cu proprietățile width, height, position, top, right, bottom și left pentru a modifica dimensiunile și poziționarea elementelor.
 Flexbox și Grid
-Creează un layout flexibil folosind display: flex și proprietățile asociate, precum flex-direction, justify-content și align-items. De asemenea, exersează crearea unui layout grid folosind display: grid și proprietățile asociate, precum grid-template-columns, grid-template-rows și grid-gap.Pseudo-clase și pseudo-elemente
-Experimentează cu pseudo-clase și pseudo-elemente pentru a aplica stiluri specifice unor elemente, cum ar fi :hover, :active, :first-child, :last-child, ::before și ::after.Animații și tranziții
+Creează un layout flexibil folosind display: flex și proprietățile asociate, precum flex-direction, justify-content și align-items. De asemenea, exersează crearea unui layout grid folosind display: grid și proprietățile asociate, precum grid-template-columns, grid-template-rows și grid-gap.
+Pseudo-clase și pseudo-elemente
+Experimentează cu pseudo-clase și pseudo-elemente pentru a aplica stiluri specifice unor elemente, cum ar fi :hover, :active, :first-child, :last-child, ::before și ::after.
+Animații și tranziții
 Creează animații și tranziții CSS folosind proprietățile transition, transform, animation și keyframes.Stilizarea formularelor
 Stilizează elemente de formular, cum ar fi butoane, câmpuri de text, casete de selectare și casete de bifare, folosind proprietăți specifice pentru aceste elemente.Responsivitate și media queries
 Fă-ți site-ul responsiv folosind media queries pentru a aplica stiluri diferite în funcție de lățimea ecranului sau a altor proprietăți ale dispozitivului.Stilizarea listelor și tabelelor
