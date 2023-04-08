@@ -1,6 +1,8 @@
 /* sursa: 
 https://www.youtube.com/watch?v=95GHRweCjkA&ab_channel=badellmaman */
 
+/* :first-child, :last-child, ::before și ::after. */
+
 * {
   margin: 0;
   padding: 0;
@@ -78,4 +80,79 @@ https://www.youtube.com/watch?v=95GHRweCjkA&ab_channel=badellmaman */
   margin: 3em 10em;
   padding: 2em;
   border: 2em solid rgba(50, 50, 136, 0.397);
+}
+
+.text2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(152, 199, 199);
+  margin: 3em 10em;
+  padding: 2em;
+  border: 2em solid rgba(50, 50, 136, 0.397);
+}
+
+.text2::before {
+  content: "";
+  display: block;
+  width: 2em;
+  height: 2em;
+  background-color: red;
+}
+.text2::after {
+  content: "";
+  display: block;
+  width: 2em;
+  height: 2em;
+  background-color: rgb(31, 33, 136);
+}
+
+/* pseudoelementele before si after pot fi folosite doar asupra elementelor detinatoare de continut si nu pot fi folosite in cazul elementelor lipsite de continut, cum ar fi "input" */
+
+/*Sursa 
+https://www.youtube.com/watch?v=OtBpgtqrjyo&ab_channel=WebDevSimplified 
+
+https://www.youtube.com/watch?v=xoRbkm8XgfQ&ab_channel=KevinPowell
+
+am ramas la min 3:35*/
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  margin: 3em;
+}
+.required::after {
+  content: "*";
+}
+
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 5px;
+  padding: 5px;
+  background-color: lightblue;
+}
+
+/* putem avea doar un pseudoelement before si unul after in jurul fiecarui element. nu putem avea doua pseudoelemente */
+
+.before-title::before {
+  content: url(../../grid/grid2/img-grid2/castel.jpg);
+}
+
+.blockquote::before {
+  content: open-quote;
+}
+.blockquote::after {
+  content: close-quote;
 }
