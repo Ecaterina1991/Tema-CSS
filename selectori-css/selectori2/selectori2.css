@@ -69,3 +69,13 @@ https://www.youtube.com/watch?v=95GHRweCjkA&ab_channel=badellmaman */
   color: red;
   margin-left: 450px;
 }
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(152, 199, 199);
+  margin: 3em 10em;
+  padding: 2em;
+  border: 2em solid rgba(50, 50, 136, 0.397);
+}
