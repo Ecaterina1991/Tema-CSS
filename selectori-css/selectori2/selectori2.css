@@ -18,6 +18,7 @@ https://www.youtube.com/watch?v=95GHRweCjkA&ab_channel=badellmaman */
 .menu a {
   display: inline-block;
 }
+
 .sub-menu a {
   display: block;
 }
@@ -65,11 +66,6 @@ https://www.youtube.com/watch?v=95GHRweCjkA&ab_channel=badellmaman */
 
 .menu li:hover .sub-menu {
   display: block;
-}
-
-.name {
-  color: red;
-  margin-left: 450px;
 }
 
 .text {
@@ -156,3 +152,121 @@ am ramas la min 3:35*/
 .blockquote::after {
   content: close-quote;
 }
+
+a[data-tool-tip] {
+  position: relative;
+}
+
+a[data-tool-tip]::after {
+  content: attr(data-tool-tip);
+  display: block;
+  position: absolute;
+  background-color: rgba(128, 128, 128, 0.288);
+  padding: 1em 3em;
+  color: azure;
+  border-radius: 5px;
+  font-size: 0.8em;
+  bottom: 0;
+  left: 0;
+  white-space: nowrap;
+  transform: scale(0);
+  transition: transform ease-out 150ms, bottom ease-out 150ms;
+}
+
+a[data-tool-tip]:hover::after {
+  transform: scale(1);
+  bottom: 100%;
+}
+
+/* Proprietatea transform cu valoarea scale(0) va face ca elementul selectat (in acest caz, a[data-tool-tip]::after) să fie redus la dimensiunea zero, fără să schimbe poziția sa în pagină.
+
+Acest lucru va face ca elementul să nu fie vizibil inițial, dar când utilizatorul va plasa cursorul mouse-ului peste elementul respectiv (utilizând hover-ul), proprietatea transform va fi schimbată pentru a mări dimensiunea elementului înapoi la dimensiunea sa normală. Mai precis, când utilizatorul va plasa cursorul mouse-ului peste elementul respectiv, se va aplica o altă regulă CSS care va schimba valoarea proprietății transform la scale(1), făcând elementul vizibil pentru utilizator.
+
+Astfel, acest cod CSS creează un efect de afișare ascunsă (tooltip) care se afișează atunci când utilizatorul plasează cursorul mouse-ului peste elementul selectat. 
+
+Proprietatea transition permite definirea unei tranziții (efect de animare) pentru o proprietate CSS atunci când aceasta este modificată. În acest caz, proprietatea transition se aplică proprietății transform, care schimbă dimensiunea elementului selectat în funcție de valoarea sa.
+
+Mai exact, proprietatea transition este definită astfel: transition: transform ease-out 150ms;. Aceasta indică faptul că atunci când proprietatea transform se schimbă, efectul de tranziție va fi aplicat prin trecerea treptată (ease-out) a proprietății transform pe o perioadă de timp de 150 milisecunde.
+
+Astfel, atunci când utilizatorul plasează cursorul mouse-ului peste elementul selectat (utilizând hover-ul), proprietatea transform se schimbă de la scale(0) la scale(1). Proprietatea transition face ca această tranziție să fie realizată printr-un efect de mărire progresivă a elementului într-un timp de 150 de milisecunde. Acest efect de tranziție face afișarea ascunsă (tooltip) mai plăcută vizual pentru utilizatorul final.*/
+
+/* /////////////////////////////////////////////////////// */
+/* Sistem de numerotare automata cu CSS si pseudoclasa before */
+/* ////////////////////////////////////////////////////////// */
+
+.counters {
+  margin-top: 7em;
+  padding: 5em 8em;
+  background: lightblue;
+  text-align: left;
+
+  counter-reset: counter-name;
+  counter-reset: ordered-list;
+  /* counter-name este un titlu dat de noi 
+  la fel si ordered-list*/
+}
+
+.section {
+  position: relative;
+}
+
+.section::before {
+  counter-increment: counter-name;
+  /* cand intram in div, se reseteaza, apoi de fiecare data cand da de clasa section, se incrementeaza 1 2 3... */
+  content: counter(counter-name);
+  position: absolute;
+  left: -2.5em;
+  top: -0.5em;
+  background: white;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid gray;
+  color: gray;
+  box-sizing: border-box;
+}
+
+/* deci aceste pseudoelemente before care sunt create ca elemente separate carora noi le definim proprietatile, ele pot fi manipulate oricum ne dorim si in cele din urma se afiseaza ca niste elemente html obisnuite*/
+
+/* putem face acelasi lucru ci listele */
+
+.counters ol {
+  /* counter-reset: ordered-list; */
+  list-style: none;
+}
+
+.counters li::before {
+  counter-increment: ordered-list;
+  content: "list item " counter(ordered-list) ") ";
+  font-size: 0.8em;
+}
+
+/* daca mai cream inca o lista la fel, numerotarea va incepe de la 1 in a doua lista, dar daca plasam intregul cod de mai sus la clasa counters in loc de ol, numerotarea va fi continua, adica in cea de-a doua lista numaratoarea va continua, nu o va lua de la capat  */
+
+/* firs-child, last-child, nth-child */
+
+.counters > ol > li:nth-child(even) {
+  color: blue;
+}
+
+.counters > ol > li:not(.yes) {
+  color: brown;
+}
+
+/* alt exemplu ar fi sa selectam toate linkurile, mai putin nav linkul cu clasa acestuia */
+
+.counters > :nth-child(3 of .section) {
+  color: red;
+}
+
+p:first-child,
+p:last-child {
+  color: greenyellow;
+}
+
+/* in cadrul divului cu clasa container-first-last, nu s-a colorat verde primul paragraf al fiecarul div interior pentru ca primul paragraf nu reprezinta primul element al divului, ci h1 este primul element al divului. am sters h1 din al doilea div si s-a colorat primul paragraf inclusiv
+
+sursa: https://www.youtube.com/watch?v=l9naF95Wzg4&t=2s&ab_channel=Chidre%27sTechTutorials*/

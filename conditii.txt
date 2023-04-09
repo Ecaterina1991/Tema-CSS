@@ -11,7 +11,8 @@ Creează un layout flexibil folosind display: flex și proprietățile asociate,
 Pseudo-clase și pseudo-elemente
 Experimentează cu pseudo-clase și pseudo-elemente pentru a aplica stiluri specifice unor elemente, cum ar fi :hover, :active, :first-child, :last-child, ::before și ::after.
 Animații și tranziții
-Creează animații și tranziții CSS folosind proprietățile transition, transform, animation și keyframes.Stilizarea formularelor
+Creează animații și tranziții CSS folosind proprietățile transition, transform, animation și keyframes.
+Stilizarea formularelor
 Stilizează elemente de formular, cum ar fi butoane, câmpuri de text, casete de selectare și casete de bifare, folosind proprietăți specifice pentru aceste elemente.Responsivitate și media queries
 Fă-ți site-ul responsiv folosind media queries pentru a aplica stiluri diferite în funcție de lățimea ecranului sau a altor proprietăți ale dispozitivului.Stilizarea listelor și tabelelor
 Personalizează aspectul listelor și tabelelor prin modificarea stilurilor listelor cu marcatori și numerotate, precum și prin aplicarea de stiluri pentru celulele tabelelor.
