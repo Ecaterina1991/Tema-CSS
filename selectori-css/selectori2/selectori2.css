@@ -264,7 +264,7 @@ Astfel, atunci când utilizatorul plasează cursorul mouse-ului peste elementul 
 
 p:first-child,
 p:last-child {
-  color: greenyellow;
+  color: rgb(85, 99, 64);
 }
 
 /* in cadrul divului cu clasa container-first-last, nu s-a colorat verde primul paragraf al fiecarul div interior pentru ca primul paragraf nu reprezinta primul element al divului, ci h1 este primul element al divului. am sters h1 din al doilea div si s-a colorat primul paragraf inclusiv
