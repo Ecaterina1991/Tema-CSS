@@ -56,28 +56,41 @@ body {
   border: 15px solid rgb(53, 51, 51);
   border-radius: 20%;
   position: relative;
-  top: 2em;
+  top: 8em;
   left: 27em;
-  width: 500px;
+  width: 800px;
   height: 300px;
   animation-name: tabla;
   animation-duration: 40s;
 }
 
 .iepuras {
-  margin-top: -9em;
+  position: absolute;
+  top: 28em;
+  left: 2em;
+}
+
+.iepuras2 {
+  position: absolute;
+  top: 27em;
+  left: 27em;
 }
 
 .oua {
   position: absolute;
-  top: -4em;
-  left: 53em;
+  top: -9em;
+  left: 63em;
 }
 
 .paste {
-  /* display: inline-block; */
   animation-name: paste;
   animation-duration: 40s;
+}
+
+.footer-animatii {
+  position: absolute;
+  top: 40em;
+  left: 35em;
 }
 
 @keyframes paste {
@@ -167,7 +180,95 @@ body {
 
 /* ////////////////////////////////////// */
 
+.iepuras {
+  opacity: 1;
+}
+
+.iepuras-2 {
+  opacity: 0;
+}
+
 @keyframes miscare-iepuras {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(calc(50% - 10px));
+  }
+}
+
+@keyframes miscare-iepuras {
+  0% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(calc(50% - 100px + 5em)) rotate(-5deg);
+    opacity: 1;
+  }
+
+  40% {
+    transform: translateX(calc(50% - 100px + 10em)) rotate(5deg);
+    opacity: 1;
+  }
+  65% {
+    transform: translateX(calc(50% - 100px + 15em)) rotate(-5deg);
+    opacity: 1;
+  }
+  70% {
+    transform: translateX(calc(50% - 100px + 20em)) rotate(5deg);
+    opacity: 1;
+  }
+  75% {
+    transform: translateX(calc(50% - 100px + 20em)) rotate(-5deg);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(calc(50% - 100px + 20em)) rotate(5deg);
+    opacity: 1;
+  }
+  83% {
+    transform: translateX(calc(50% - 100px + 23em)) rotate(-60deg);
+    opacity: 1;
+  }
+
+  84% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.iepuras {
+  animation: miscare-iepuras 10s ease-out forwards;
+}
+
+@keyframes schimbare-opacitate {
+  0%,
+  40% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  65%,
+  84%,
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.iepuras-2 {
+  /* Aplicam animatia pentru schimbarea opacitatii */
+  animation-name: schimbare-opacitate;
+  animation-duration: 20s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  position: relative;
+  left: 28em;
+}
+
+@keyframes miscare-iepuras2 {
   0% {
     transform: translateX(-100%);
   }
@@ -176,42 +277,58 @@ body {
   }
 }
 
-@keyframes miscare-iepuras {
+@keyframes miscare-iepuras2 {
   0% {
     transform: translateX(-100%);
+    opacity: 0;
   }
   40% {
     transform: translateX(calc(50% - 100px));
+    opacity: 0;
   }
   65% {
-    transform: translateX(calc(50% - 100px));
+    transform: translateX(calc(50% - 100px)) rotate(-5deg);
+
+    opacity: 1;
   }
+
+  74% {
+    transform: translateX(calc(50% - 100px + 10em)) rotate(5deg);
+    opacity: 1;
+  }
+
   84% {
-    transform: translateX(calc(50% - 100px + 10em));
+    transform: translateX(calc(50% - 100px + 20em)) rotate(-5deg);
+    opacity: 1;
   }
+
   100% {
-    transform: translateX(calc(50% - 100px + 10em));
+    transform: translateX(calc(50% - 100px + 25em)) rotate(5deg);
+    opacity: 1;
   }
+  /* Adaugăm această proprietate pentru a păstra ultima valoare a transformării după finalizarea animației */
 }
 
-/* Această secțiune de cod definește animația numită "miscare-iepuras", care va fi utilizată pentru a muta iepurașul pe ecran. 
-
-La 0%, iepurașul este plasat în afara ecranului în stânga containerului, utilizând transform: translateX(-100%).
-
-La 40%, iepurașul începe să se miște către dreapta, folosind transform: translateX(calc(50% - 50px)). Aceasta este o expresie CSS care calculează poziția iepurașului relativ la jumătatea containerului. "50%" este jumătatea containerului, iar "50px" este jumătatea lățimii iepurașului. Astfel, iepurașul este plasat exact în centru la 33.33% din durata totală a animației.
-
-La 65%, iepurașul continuă să stea în aceeași poziție, folosind transform: translateX(calc(50% - 50px)). Acest stadiu durează o perioadă egală cu cea de la stadiul anterior, de la 33.33% la 66.66%.
-
-La 84%, iepurașul începe să se miște din nou către dreapta, folosind transform: translateX(calc(50% - 50px + 14em)). Aceasta este o expresie care calculează poziția iepurașului relativ la jumătatea containerului, plus o distanță de 14em. Astfel, iepurașul se mișcă de la centru la dreapta ecranului.
-
-La 100%, iepurașul ajunge la sfârșitul mișcării sale, plasându-se în afara ecranului în dreapta containerului, utilizând transform: translateX(calc(50% - 50px + 14em)). */
-
-.iepuras {
-  animation: miscare-iepuras 20s ease forwards;
+.iepuras2 {
+  animation: miscare-iepuras2 20s ease-in-out forwards;
 }
 
-/* Această secțiune de cod aplică animația "move-iepuras" la elementul cu clasa .iepuras. Aceasta înseamnă că animația va fi aplicată iepurașului de pe ecran. Proprietatea animation specifică animația
+/* ///////////////////////////////////
+///////////////////////////////////
+//////////////////////////////////////// */
 
-În contextul codului CSS dat, valoarea forwards este folosită pentru a păstra starea finală a animației după ce aceasta se termină. Mai precis, când animația ajunge la sfârșit, starea finală (adică poziția iepurașului la finalul animației) va fi menținută și nu se va mai întoarce la starea inițială.
+.footer-animatii {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5em;
+  padding: 1.5em;
+  background-color: rgb(180, 236, 49);
+}
 
-Astfel, dacă valoarea forwards nu ar fi fost specificată, iepurașul ar fi revenit la starea inițială (adică poziția sa dinainte de începerea animației), la sfârșitul celor 20 de secunde. Cu această valoare setată, iepurașul va rămâne în ultima sa poziție, adică la tabla, și nu se va mai întoarce la poziția sa inițială.*/
+.copyright-animatii {
+  font-size: 1.2em;
+  font-weight: 900;
+
+  color: whitesmoke;
+}
