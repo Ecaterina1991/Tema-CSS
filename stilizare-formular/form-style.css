@@ -1,2 +1,81 @@
 /* Stilizarea formularelor
-Stilizează elemente de formular, cum ar fi butoane, câmpuri de text, casete de selectare și casete de bifare, folosind proprietăți specifice pentru aceste elemente. */
+Stilizează elemente de formular, cum ar fi butoane, câmpuri de text, casete de selectare și casete de bifare, folosind proprietăți specifice pentru aceste elemente. 
+
+Sursa:
+https://www.youtube.com/watch?v=HiHHvTcHiEk&list=PL4cUxeGkcC9g5_p_BVUGWykHfqx6bb7qK&ab_channel=TheNetNinja
+*/
+
+/* 1 - BASE FORM STYLES */
+
+body {
+  background-color: #141414;
+  margin: 0;
+  font-family: arial;
+}
+
+header {
+  background: #252323;
+  padding: 20px;
+  text-align: center;
+}
+
+form {
+  margin: 20px;
+  color: #eee;
+  background-color: rgb(54, 90, 54);
+}
+
+form p {
+  font-size: 18px;
+  letter-spacing: 0.1em;
+}
+
+/* 2 - RADIO BOX STYLES */
+
+input[type="radio"] {
+  /* opacity: 1; */
+  /* width: 0; */
+  margin-left: 20px;
+}
+
+label[for="male"],
+label[for="female"] {
+  margin-bottom: 10px;
+  display: inline-block;
+  padding-left: 0;
+  cursor: pointer;
+}
+
+input:checked + label[for="male"],
+input:checked + label[for="female"] {
+  background-position: 0 0;
+  color: #b6f156;
+}
+
+/* 3 - CHECKBOX STYLES */
+
+input[type="checkbox"] {
+  /* opacity: 1; */
+  /* width: 0; */
+  margin-left: 20px;
+}
+
+label[for="web"],
+label[for="photoshop"],
+label[for="madona"] {
+  margin-bottom: 10px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+input:checked + label[for="web"],
+input:checked + label[for="photoshop"],
+input:checked + label[for="madona"] {
+  color: #b6f156;
+}
+
+/* 4 - TEXT INPUT STYLES & FIELDSETS */
+
+/* 5 - SELECT BOXES */
+
+/* 6 - INPUT VALIDATION STYLES */
