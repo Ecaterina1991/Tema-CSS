@@ -1,0 +1,63 @@
+/* https://www.youtube.com/watch?v=jcThx0U066w&ab_channel=DaveGray */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 5% 10%;
+  font-size: 2rem;
+  max-width: 1200px;
+}
+
+.nav-prima-pagina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  font-size: 1.7em;
+  font-weight: 600;
+}
+.nav-prima-pagina > li {
+  list-style-type: none;
+}
+
+.nav-prima-pagina > li > a {
+  text-decoration: none;
+}
+.nav-prima-pagina > li > a:hover {
+  text-decoration: none;
+  color: rgb(25, 82, 47);
+}
+.nav-prima-pagina > li > a:active {
+  text-decoration: none;
+  color: rgb(21, 34, 26);
+}
+
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul {
+  list-style-type: square;
+  text-align: center;
+  list-style-position: inside;
+  color: blue;
+  line-height: 1.6;
+  /* list-style-image: url(../stilizare-formular/img/bifat.png);
+  list-style: square url("../stilizare-formular/img/bifat.png") inside; */
+}
+
+ul li:nth-child(even) {
+  color: red;
+}
+
+ol ::marker {
+  color: red;
+  font-family: fantasy;
+  font-size: 1em;
+  content: "Only $5 >> ";
+}

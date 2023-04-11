@@ -72,7 +72,7 @@ footer {
 .hero {
   grid-area: hero;
   background: url("../stilizare-elemente/img/galben.jpg") no-repeat center
-    center fixed;
+    center local;
   display: flex;
   flex-direction: column;
   align-items: center;
