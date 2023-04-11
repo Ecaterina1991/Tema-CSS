@@ -15,6 +15,10 @@ Creează animații și tranziții CSS folosind proprietățile transition, trans
 Stilizarea formularelor
 Stilizează elemente de formular, cum ar fi butoane, câmpuri de text, casete de selectare și casete de bifare, folosind proprietăți specifice pentru aceste elemente.
 Responsivitate și media queries
-Fă-ți site-ul responsiv folosind media queries pentru a aplica stiluri diferite în funcție de lățimea ecranului sau a altor proprietăți ale dispozitivului.Stilizarea listelor și tabelelor
+
 Personalizează aspectul listelor și tabelelor prin modificarea stilurilor listelor cu marcatori și numerotate, precum și prin aplicarea de stiluri pentru celulele tabelelor.
+
+Fă-ți site-ul responsiv folosind media queries pentru a aplica stiluri diferite în funcție de lățimea ecranului sau a altor proprietăți ale dispozitivului.
+Stilizarea listelor și tabelelor
+
 După ce ai parcurs aceste exerciții, vei avea o înțelegere solidă a aspectelor de bază ale CSS și a modului în care pot fi folosite pentru a stiliza o pagină web. Nu uita să le aplici pe o structură HTML pentru a vedea efectele în practică.
