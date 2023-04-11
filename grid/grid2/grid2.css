@@ -69,7 +69,8 @@ header {
   grid-area: hero;
   background: url(img-grid2/galben.jpg);
   background-repeat: no-repeat;
-  background-position: fixed;
+  background-position: center center;
+  background-attachment: local;
 }
 
 .hero-title {

@@ -54,7 +54,7 @@ body {
 .text-container {
   flex: 1;
   font-size: 1.5em;
-  font-size: clamp(0.7em, 2vm, 1.5em);
+  font-size: clamp(0.7em, 2em, 1.5em);
 }
 
 /* experiment cu succes. am reprezentat cea mai simpla aranjare stanga dreapta in pagina cu flexbox. 

@@ -30,7 +30,6 @@ h2 {
   font-family: "Source Sans Pro", sans-serif;
   color: rgb(58, 54, 54);
   font-size: 4em;
-  font-size: clamp(2em, 2vm, 4em);
   font-weight: 900;
   top: 4em;
   left: 1.8em;
@@ -39,13 +38,11 @@ h2 {
 @media (max-width: 40em) {
   .text {
     font-size: 1.5em;
-    font-size: clamp(0.5em, 3vm, 1.5em);
   }
 }
 
 .second-section > div {
   font-size: 1.5em;
-  font-size: clamp(1em, 2vm, 2em);
 }
 
 .container {
