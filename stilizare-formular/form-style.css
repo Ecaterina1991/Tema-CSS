@@ -86,7 +86,7 @@ legend {
 }
 
 input[type="email"],
-input[type="telephone"] {
+input[type="tel"] {
   display: block;
   margin-bottom: 20px;
   padding: 10px 10px 10px 50px;
@@ -115,9 +115,16 @@ select {
   width: 280px;
 }
 
+textarea[id="textarea"] {
+  display: block;
+  margin: 20px 20px;
+  background-color: #323b24;
+  color: white;
+}
+
 input[type="submit"] {
   background: #b6f156;
-  margin: 20px 20px;
+  margin: 30px 20px 30px 20px;
   padding: 15px;
   color: black;
   font-size: 20px;
@@ -129,5 +136,3 @@ input[type="submit"] {
 }
 
 /* este o idee buna sa folosim umbra la butonul de submit */
-
-/* 6 - INPUT VALIDATION STYLES */
