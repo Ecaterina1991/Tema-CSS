@@ -2,3 +2,52 @@
 
 https://www.youtube.com/watch?v=sKFW3wek21Q&ab_channel=KevinPowell
 */
+
+body {
+  font-family: "Bungee", sans-serif;
+  font-size: 1rem;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 100rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+/* paddind-inline = paddingul aplicat in stanga si in dreapta containerului */
+
+.stacked {
+  display: grid;
+}
+
+.stacked > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+  aspect-ratio: 1/1.5;
+  border: 3px solid hotpink;
+}
+
+.card__content {
+  background: white;
+  align-self: end;
+  margin: 0.5rem 0.5rem 2rem;
+  padding: 0.5rem;
+  box-shadow: 0 0.25rem 1rem rgb(0 0 0 / 0.1);
+}
+
+.card__img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* in interiorul unui grid este bine sa inseram max-width: 100% ca sa nu umple intreaga pagina cu continut */
