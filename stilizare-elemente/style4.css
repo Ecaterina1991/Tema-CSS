@@ -12,6 +12,16 @@ body {
   background-color: rgba(66, 245, 245, 0.774);
 }
 
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+  background-color: rgb(40, 32, 87);
+  color: aliceblue;
+  font-size: 2em;
+}
+
 h2 {
   display: flex;
   justify-content: center;
