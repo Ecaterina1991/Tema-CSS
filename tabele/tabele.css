@@ -1,0 +1,76 @@
+/* /////////////////////////////////// */
+/* Stilizare Tabel CSS */
+/* /////////////////////////////////// */
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+}
+
+/* Outline-ul este o proprietate CSS care se referă la o linie care apare în jurul elementului atunci când acesta primește focusul. Deoarece acesta este setat pe zero, nu va apărea nicio linie de contur în jurul elementului atunci când acesta primește focusul. */
+
+.nav-prima-pagina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  font-size: 1.7em;
+  font-weight: 600;
+}
+
+.nav-prima-pagina > li {
+  list-style-type: none;
+}
+
+.nav-prima-pagina > li > a {
+  text-decoration: none;
+}
+.nav-prima-pagina > li > a:hover {
+  text-decoration: none;
+  color: rgb(25, 82, 47);
+}
+.nav-prima-pagina > li > a:active {
+  text-decoration: none;
+  color: rgb(21, 34, 26);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 0 0;
+}
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+  margin: 0 auto;
+}
+
+th {
+  padding: 18px;
+}
+
+td {
+  padding: 12px;
+}
+
+th,
+td {
+  border: solid 1px #e6e6e6;
+  text-align: center;
+}
+
+tr {
+  background-color: #ededed;
+}
+
+tr.even {
+  background-color: #f7f7f7;
+}
+
+#heading {
+  background-color: #02ad8b;
+  color: white;
+}
