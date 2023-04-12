@@ -1,0 +1,53 @@
+/* 1. Selectori CSS
+Experimentează cu selectori diferiți precum: selectori de tip, selectori de clasă, selectori de ID, selectori de atribut și combinații ale acestora. */
+
+/* ? ////////////////////SELECTORI DE TIP  */
+
+/* selector de element */
+
+p {
+  color: blue;
+  font-size: 2em;
+}
+
+/* selector de clasa */
+
+.paragraf4 {
+  color: brown;
+}
+
+/* selector de id */
+
+#paragraf3 {
+  color: green;
+}
+
+/* selector de atribut */
+[href="https://www.google.com/"]
+{
+  font-size: 1em;
+  color: aqua;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.nav > li {
+  list-style-type: none;
+}
+.nav > li > a:hover {
+  color: rgb(61, 151, 102);
+}
+.nav > li > a:active {
+  color: rgb(33, 66, 48);
+}
+.nav > li > a {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: large;
+  color: rgb(46, 28, 28);
+}

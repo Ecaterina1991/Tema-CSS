@@ -4,9 +4,33 @@ https://www.youtube.com/watch?v=sKFW3wek21Q&ab_channel=KevinPowell
 */
 
 body {
-  font-family: "Bungee", sans-serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
   padding: 2rem 0;
+  background-color: rgb(222, 252, 252);
+}
+
+.nav-prima-pagina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  font-size: 1.7em;
+  font-weight: 600;
+}
+.nav-prima-pagina > li {
+  list-style-type: none;
+}
+
+.nav-prima-pagina > li > a {
+  text-decoration: none;
+}
+.nav-prima-pagina > li > a:hover {
+  text-decoration: none;
+  color: rgb(25, 82, 47);
+}
+.nav-prima-pagina > li > a:active {
+  text-decoration: none;
+  color: rgb(21, 34, 26);
 }
 
 .container {
@@ -28,20 +52,34 @@ body {
 
 .product-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
 .card {
   aspect-ratio: 1/1.5;
-  border: 3px solid hotpink;
+  /* border: 3px solid hotpink; */
 }
 
 .card__content {
   background: white;
+  /* max-height: 25%; */
   align-self: end;
-  margin: 0.5rem 0.5rem 2rem;
-  padding: 0.5rem;
+  line-height: 0.1em;
+  margin: 0.5rem 0.5rem 1rem;
+  padding: 0.3rem;
   box-shadow: 0 0.25rem 1rem rgb(0 0 0 / 0.1);
+}
+
+.card__title {
+  font-size: 1.25rem;
+  line-height: 1.1;
+  color: firebrick;
+  font-family: "Bungee", sans-serif;
+}
+
+.card__price {
+  font-size: 1.75rem;
 }
 
 .card__img {
@@ -50,4 +88,57 @@ body {
   object-fit: cover;
 }
 
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+  color: black;
+  padding: 3rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 60em) {
+  .card_img {
+    aspect-ratio: 1/1;
+  }
+
+  .card.featured {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  .card.featured .card__img {
+    aspect-ratio: 1 / 1.25;
+  }
+
+  .card.featured .card__title {
+    font-size: 1.75rem;
+  }
+}
 /* in interiorul unui grid este bine sa inseram max-width: 100% ca sa nu umple intreaga pagina cu continut */
+
+/* .card__img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+Proprietatea object-fit controlează modul în care imaginea este redimensionată și plasată în interiorul containerului în care este afișată. Valoarea cover specificată în acest cod face ca imaginea să fie redimensionată astfel încât să acopere complet containerul, fără a modifica proporțiile aspectului său.
+
+De exemplu, dacă imaginea are o proporție lățime/înălțime diferită de cea a containerului în care este afișată, atunci proprietatea object-fit: cover va face ca imaginea să fie decupată și redimensionată astfel încât să acopere complet containerul, iar marginile imagini vor fi ascunse.
+
+Acest cod poate fi utilizat pentru a asigura că imaginile afișate în cadrul elementelor de tip card au aceleași proporții și ocupă întregul spațiu disponibil pentru acea zonă de afișare, indiferent de dimensiunile lor originale. Acest lucru poate crea un design coerent și estetic plăcut pentru elementele de tip card. */
+
+/*
+.stacked > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+Acest cod CSS se aplică tuturor elementelor copil ale unui element părinte cu clasa .stacked. El setează proprietățile grid-column și grid-row ale acestor elemente la valorile 1 / 2, ceea ce înseamnă că fiecare element copil ocupă un singur colț al unui grid.
+
+Cu alte cuvinte, acest cod creează un grid format dintr-un singur rând și o singură coloană, iar fiecare element copil al elementului părinte .stacked ocupă întregul spațiu al unei celule în acest grid. Rezultatul este un layout stack, în care elementele sunt plasate unul deasupra celuilalt.
+
+Este posibil ca acest cod să fie utilizat pentru a crea un design simplu și vertical pentru o listă de elemente, cum ar fi o listă de carduri sau o listă de blocuri de text, unde se dorește ca fiecare element să ocupe întregul spațiu al containerului în care este plasat, dar să fie dispuse vertical, unul după altul. */
