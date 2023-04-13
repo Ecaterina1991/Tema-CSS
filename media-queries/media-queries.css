@@ -142,3 +142,19 @@ Acest cod CSS se aplică tuturor elementelor copil ale unui element părinte cu 
 Cu alte cuvinte, acest cod creează un grid format dintr-un singur rând și o singură coloană, iar fiecare element copil al elementului părinte .stacked ocupă întregul spațiu al unei celule în acest grid. Rezultatul este un layout stack, în care elementele sunt plasate unul deasupra celuilalt.
 
 Este posibil ca acest cod să fie utilizat pentru a crea un design simplu și vertical pentru o listă de elemente, cum ar fi o listă de carduri sau o listă de blocuri de text, unde se dorește ca fiecare element să ocupe întregul spațiu al containerului în care este plasat, dar să fie dispuse vertical, unul după altul. */
+
+/*.product-grid {
+  display: grid;
+  gap: 0.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+ Aceasta este o regulă CSS care se aplică la clasa "product-grid" și care definește un container de tip grilă pentru afișarea produselor. Regula include următoarele stiluri:
+
+"display: grid" setează containerul pentru a utiliza modelul de afișare în grilă.
+
+"gap: 0.25rem" stabilește un spațiu de 0.25 rem între elementele din grilă.
+
+"grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr))" definește coloanele grilei. Această regulă este formată din două funcții CSS. Prima, "repeat(auto-fit," determină numărul de coloane necesare pentru a încăpea toate elementele în container, în funcție de lățimea disponibilă. A doua funcție, "minmax(15rem, 1fr)", definește lățimea minimă și maximă pentru fiecare coloană. În acest caz, fiecare coloană va avea o lățime minimă de 15rem, dar va crește la lățimea maximă disponibilă, împărțind spațiul disponibil în mod egal între coloane.
+
+În esență, această regulă CSS creează o grilă flexibilă, care se va adapta automat la spațiul disponibil și va asigura că toate elementele încap în container. Aceasta este utilă pentru afișarea produselor într-un mod flexibil și adaptabil la diferite dimensiuni ale ecranului. */
