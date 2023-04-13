@@ -29,14 +29,15 @@ body {
 
 .nav-prima-pagina > li > a {
   text-decoration: none;
+  color: bisque;
 }
 .nav-prima-pagina > li > a:hover {
   text-decoration: none;
-  color: rgb(25, 82, 47);
+  color: #fff;
 }
 .nav-prima-pagina > li > a:active {
   text-decoration: none;
-  color: rgb(21, 34, 26);
+  color: #fff;
 }
 
 header h1 {
