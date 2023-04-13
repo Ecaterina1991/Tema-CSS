@@ -13,10 +13,38 @@ body {
   font-family: arial;
 }
 
+.nav-prima-pagina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  font-size: 1.7em;
+  font-weight: 600;
+}
+.nav-prima-pagina > li {
+  list-style-type: none;
+}
+
+.nav-prima-pagina > li > a {
+  text-decoration: none;
+}
+.nav-prima-pagina > li > a:hover {
+  text-decoration: none;
+  color: rgb(25, 82, 47);
+}
+.nav-prima-pagina > li > a:active {
+  text-decoration: none;
+  color: rgb(21, 34, 26);
+}
+
 header {
   background: #252323;
   padding: 20px;
   text-align: center;
+}
+
+header h1 {
+  color: azure;
 }
 
 form {
@@ -28,13 +56,12 @@ form {
 form p {
   font-size: 18px;
   letter-spacing: 0.1em;
+  margin-left: 15px;
 }
 
 /* 2 - RADIO BOX STYLES */
 
 input[type="radio"] {
-  /* opacity: 1; */
-  /* width: 0; */
   margin-left: 20px;
 }
 
