@@ -8,7 +8,7 @@
 }
 
 body {
-  font-size: 18px;
+  font-size: 1.13em;
   background-color: rgba(66, 245, 245, 0.774);
 }
 
@@ -26,6 +26,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1em;
 }
 
 .experiment {
@@ -43,12 +44,6 @@ h2 {
   font-weight: 900;
   top: 4em;
   left: 1.8em;
-}
-
-@media (max-width: 40em) {
-  .text {
-    font-size: 1.5em;
-  }
 }
 
 .second-section > div {
@@ -77,12 +72,6 @@ h2 {
   background-color: rgb(13, 13, 65);
 }
 
-/* @media (max-width: 40em) {
-  nav {
-    display: none;
-  }
-} */
-
 .nav > li > a {
   list-style: none;
   text-decoration: none;
@@ -90,7 +79,7 @@ h2 {
 }
 
 .nav > * {
-  padding: 15px 0;
+  padding: 0.94em 0;
   font-size: 1.4em;
 }
 
@@ -101,6 +90,7 @@ li {
 
 .second-section-item {
   flex: 1;
+  margin-bottom: 1em;
 }
 
 .second-section {
@@ -151,7 +141,17 @@ li {
   gap: 1em;
 }
 
-@media (min-width: 45em) {
+@media (max-width: 44em) {
+  .text {
+    font-size: 1.5em;
+  }
+
+  .nav {
+    display: block;
+  }
+}
+
+@media (min-width: 44em) {
   .columns {
     grid-auto-flow: column;
   }
@@ -162,6 +162,20 @@ li {
     gap: 2em;
     margin: 5rem auto;
     width: min(90%, 75rem);
+  }
+
+  .text {
+    top: 5em;
+    left: 3em;
+    font-size: 1.8em;
+  }
+}
+
+@media (min-width: 60em) {
+  .text {
+    top: 7em;
+    left: 5em;
+    font-size: 2.5em;
   }
 }
 
