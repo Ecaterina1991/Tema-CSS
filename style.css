@@ -14,33 +14,42 @@ body {
   position: relative;
 }
 
-.nav {
+nav {
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  justify-content: space-around;
+
   gap: 1em;
-  background-color: rgb(194, 228, 228);
+  background-color: aliceblue;
+  padding-bottom: 1em;
+  padding-top: 1em;
 }
 
-.nav > li {
-  list-style-type: none;
-}
-.nav > li > a:hover {
-  color: rgb(61, 151, 102);
-}
-.nav > li > a:active {
-  color: rgb(33, 66, 48);
-}
-.nav > li > a {
+nav a {
   text-decoration: none;
+  padding: 1em;
+  font-size: 1.2em;
   font-weight: 800;
-  font-size: large;
-  color: rgb(46, 28, 28);
+  background-color: #5ff1f1;
+  border: 1px solid rgb(24, 24, 75);
 }
 
-h1 {
+nav a:hover,
+nav a:active {
+  background-color: orangered;
+  color: aliceblue;
+  border: 1px solid rgb(24, 24, 75);
+}
+
+nav a:focus {
+  background-color: rgb(27, 58, 83);
+  color: aliceblue;
+  border: 1px solid rgb(24, 24, 75);
+}
+
+header h1 {
   position: absolute;
-  top: 6em;
+  top: 11em;
   left: 32.5em;
   color: white;
 }
