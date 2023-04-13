@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  max-width: 100%;
+  height: auto;
+}
+
 nav {
   display: flex;
   justify-content: space-evenly;
@@ -33,4 +38,18 @@ nav a:focus {
   background-color: rgb(27, 58, 83);
   color: aliceblue;
   border: 1px solid rgb(24, 24, 75);
+}
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3em;
+}
+
+.img {
+  width: 25em;
+  height: auto;
+  border: 5px solid rgba(97, 97, 226, 0.301);
+  border-radius: 1.88em;
 }
