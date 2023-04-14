@@ -159,3 +159,7 @@ aside > p {
 footer {
   grid-area: footer;
 }
+
+.footer-title {
+  font-size: 0.8em;
+}

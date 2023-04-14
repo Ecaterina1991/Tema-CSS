@@ -1,6 +1,7 @@
-.nav3-prima-pagina {
-  /* display: flex;
-  justify-content: flex-end; */
+/* MOdelul este localizat in folderului grid3 cu denumirea ”grid-template1.png” */
+
+/* .nav3-prima-pagina {
+
   align-items: center;
   padding: 1em;
   font-size: 1em;
@@ -21,8 +22,7 @@
   text-decoration: none;
   color: rgb(21, 34, 26);
 }
-/* .nav3-prima-pagina > li > a {
-} */
+
 
 body {
   display: grid;
@@ -44,9 +44,7 @@ header {
   align-items: center;
 }
 
-/* main {
-  grid-area: main;
-} */
+
 
 main {
   grid-area: section-a;
@@ -80,8 +78,74 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 /* Nu m-am așteptat să întâmpin dificultăți în construirea acestui grid simplist, dar nu mi-a ieșit nici din prima, nici din a doua, nici din a treia încercare.
 Prima greșeală e că am plasat într-o secțiune toate celelalte componente mai mici marcate cu sintaxa HTML5, ex header, main footer. Apoi nu a fost cea mai buna idee că cele trei secțiuni pe care am vrut sa le aliniez in pagina sa le plasez în acelasi container main. A funcționat după ce am șters secțiunea generala și după ce am creat un container main si doua aside pentru conținutul principal. Cumva stabilirea unei sintaxe HTML5 pentru containerele principale care necesita aliniere a funcționat cel mai bine. Posibil că parserul sa aibă o ușurință înaltă în citirea sintaxei html5 de tip arbore DOM.
  */
+
+/* Creați o grilă cu 3 rânduri și 3 coloane.
+În primul rând, creați trei coloane cu lățime egală.
+În al doilea rând, creați două coloane în care prima coloană este de două ori mai lată decât cea de-a doua coloană.
+În al treilea rând, creați o singură coloană care se întinde pe toate cele trei coloane.
+Adăugați conținut în fiecare celulă a grilei astfel încât să puteți vedea cum arată aspectul layout-ului. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  font-size: large;
+  color: aliceblue;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "header-a header-b header-c"
+    "main double double"
+    "footer footer footer";
+}
+
+.a {
+  grid-area: header-a;
+  background-color: red;
+  padding: 20px;
+}
+
+.b {
+  grid-area: header-b;
+  background-color: blueviolet;
+  padding: 20px;
+}
+
+.c {
+  grid-area: header-c;
+  background-color: aquamarine;
+  padding: 20px;
+}
+
+.d {
+  grid-area: main;
+  background-color: orange;
+  padding: 20px;
+}
+
+.e {
+  grid-area: double;
+  background-color: blue;
+  padding: 20px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: bisque;
+  padding: 20px;
+}
+
+/* In acest exercitiu am obtinut rezultatul corect doar dupa ce am scos din header si din main divurile din primele doua randuri. Daca as substitui main si header cu div, rezultatul ar fi iarasi incorect, pentru ca div, header si main sunt elemente de tip block care forteaza dispunerea elementelor pe intreaga latime a containerului. Dintr-un motiv sau altul grid area nu are o specificatie mai mare si o putere mai mare decat setarea implicita a acestor elemente de structura html5 */
