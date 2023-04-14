@@ -6,6 +6,8 @@
 
 body {
   padding-inline: 2em;
+  width: 75em;
+  margin: 0 auto;
 }
 
 .nav-prima-pagina {
@@ -39,6 +41,11 @@ body {
 .suprapuse > * {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
+}
+
+.container {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .product-grid {
@@ -80,10 +87,12 @@ footer {
   font-size: 4em;
   padding: 0.8em;
   background-color: aquamarine;
+  box-shadow: 2px 2px 4px rgb(20, 20, 20, 0.3);
 }
 
 footer {
   font-size: 2em;
+  margin-bottom: 0.5em;
 }
 
 @media (min-width: 60em) {

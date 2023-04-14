@@ -1,7 +1,6 @@
 /* MOdelul este localizat in folderului grid3 cu denumirea ”grid-template1.png” */
 
-/* .nav3-prima-pagina {
-
+.nav3-prima-pagina {
   align-items: center;
   padding: 1em;
   font-size: 1em;
@@ -23,7 +22,6 @@
   color: rgb(21, 34, 26);
 }
 
-
 body {
   display: grid;
   grid-template:
@@ -43,8 +41,6 @@ header {
   justify-content: space-around;
   align-items: center;
 }
-
-
 
 main {
   grid-area: section-a;
@@ -72,13 +68,13 @@ aside > div > p {
   display: inline-block;
 }
 
-footer {
+.footer-grid {
   grid-area: footer;
   background-color: aqua;
   display: flex;
   justify-content: center;
   align-items: center;
-} */
+}
 
 /* Nu m-am așteptat să întâmpin dificultăți în construirea acestui grid simplist, dar nu mi-a ieșit nici din prima, nici din a doua, nici din a treia încercare.
 Prima greșeală e că am plasat într-o secțiune toate celelalte componente mai mici marcate cu sintaxa HTML5, ex header, main footer. Apoi nu a fost cea mai buna idee că cele trei secțiuni pe care am vrut sa le aliniez in pagina sa le plasez în acelasi container main. A funcționat după ce am șters secțiunea generala și după ce am creat un container main si doua aside pentru conținutul principal. Cumva stabilirea unei sintaxe HTML5 pentru containerele principale care necesita aliniere a funcționat cel mai bine. Posibil că parserul sa aibă o ușurință înaltă în citirea sintaxei html5 de tip arbore DOM.
@@ -90,7 +86,7 @@ Prima greșeală e că am plasat într-o secțiune toate celelalte componente ma
 În al treilea rând, creați o singură coloană care se întinde pe toate cele trei coloane.
 Adăugați conținut în fiecare celulă a grilei astfel încât să puteți vedea cum arată aspectul layout-ului. */
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -146,6 +142,6 @@ footer {
   grid-area: footer;
   background-color: bisque;
   padding: 20px;
-}
+} */
 
 /* In acest exercitiu am obtinut rezultatul corect doar dupa ce am scos din header si din main divurile din primele doua randuri. Daca as substitui main si header cu div, rezultatul ar fi iarasi incorect, pentru ca div, header si main sunt elemente de tip block care forteaza dispunerea elementelor pe intreaga latime a containerului. Dintr-un motiv sau altul grid area nu are o specificatie mai mare si o putere mai mare decat setarea implicita a acestor elemente de structura html5 */
