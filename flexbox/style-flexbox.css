@@ -7,6 +7,9 @@
 body {
   background-color: aqua;
   margin: 0 auto;
+  font-size: 1.2em;
+  max-width: 75em;
+  color: rgb(83, 80, 80);
 }
 
 /* Stilizare nav Inapoi catre prima pagina */
@@ -16,7 +19,6 @@ body {
   justify-content: center;
   align-items: center;
   padding: 2em;
-  font-size: 1.7em;
   font-weight: 600;
 }
 .nav-prima-pagina > li {
@@ -38,24 +40,28 @@ body {
 /* 
 /////////////////////////// */
 
-.container {
+/* .container {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 1.85em;
-  gap: 1.87em;
+  gap: 1.8em;
+}
+
+.imagine-container {
+  flex: 1;
 }
 
 .imagine {
-  flex: 1;
-  max-width: 22em;
+  width: 90%;
+  height: auto;
 }
 
 .text-container {
   flex: 1;
   font-size: 1.5em;
   font-size: clamp(0.7em, 2em, 1.5em);
-}
+} */
 
 /* experiment cu succes. am reprezentat cea mai simpla aranjare stanga dreapta in pagina cu flexbox. 
 Clasa .container este folosită pentru a grupa imaginea și textul și a se aplica stilurile flexbox.
@@ -63,6 +69,35 @@ Proprietatea display: flex face ca elementul .container să devină un container
 Proprietatea flex-direction: row specifică că elementele sunt aranjate pe aceeași linie orizontală.
 Proprietatea align-items: center este folosită pentru a centra imaginea și textul pe axa verticală.
 Stilul flex: 1 aplicat la imagine și text face ca acestea să fie flexibile și să împartă spațiul disponibil în container.*/
+
+/* si acum voi incerca alta metoda flexbox */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3em;
+}
+
+.imagine-container,
+.text-container {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-container {
+  padding: 1em;
+  background-color: rgba(230, 224, 224, 0.74);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+}
+
+.imagine {
+  width: 100%;
+  margin-right: 3em;
+  border: 20px solid rgba(33, 33, 63, 0.233);
+}
 
 .patrate {
   padding: 4em 0;
@@ -82,20 +117,37 @@ Stilul flex: 1 aplicat la imagine și text face ca acestea să fie flexibile și
 }
 .patrat-rosu {
   background-color: red;
+  color: white;
 }
 .patrat-verde {
   background-color: green;
+  color: yellow;
 }
 .patrat-albastru {
   background-color: blue;
+  color: bisque;
 }
 
 .paragraf-centrat {
-  padding: 0 2em;
-  font-size: 1.5em;
+  padding: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 3em;
+  background-color: rgba(230, 224, 224, 0.74);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+}
+
+.patrat-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  font-weight: 900;
+}
+
+.patrat-galben {
+  padding-left: 2.6em;
 }
 
 footer {
@@ -106,4 +158,23 @@ footer {
   color: aliceblue;
   padding: 2em 2em;
   background-color: rgb(73, 26, 26);
+}
+
+@media (max-width: 85em) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+
+  .imagine-container,
+  .text-container {
+    display: flex;
+    width: 100%;
+  }
+
+  .patrate {
+    display: flex;
+    flex-direction: column;
+  }
 }
